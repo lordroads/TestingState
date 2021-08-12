@@ -4,6 +4,6 @@ namespace TestingState
 {
     interface ITest
     {
-        public List<Question> GetQuestions();
+        public List<Question> GetQuestions(); 
     }
 }

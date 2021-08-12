@@ -4,49 +4,50 @@ namespace TestingState
 {
     class Tested : ITest
     {
-        private static readonly Tested instance = new Tested();
-        private List<Question> Questions = new List<Question>(){
-            new Question(){
-                TitleQuestion = "Тебе грустно?",
-                TitleAnswers = new List<string>(){
-                    "Мне не грустно",
-                    "Я чувствую печаль большую часть времени",
-                    "Я все время печален",
-                    "Я так печален и несчастлив, что я не могу этого вынести",
-                    "test5",
-                    "test6"
+        private static readonly Tested instance = new Tested(); 
+        private List<Question> Questions = new List<Question>(){ 
+            new Question(){ 
+                TitleQuestion = "Тебе грустно?", 
+                TitleAnswers = new List<string>(){ 
+                    "Мне не грустно", 
+                    "Я чувствую печаль большую часть времени", 
+                    "Я все время печален", 
+                    "Я так печален и несчастлив, что я не могу этого вынести", 
+                    "test5", 
+                    "test6" 
                 },
                 AnswerPoints = new Dictionary<int, int>(){
-                    {1, 0},
-                    {2, 1},
-                    {3, 2},
-                    {4, 3},
-                    {5, 4},
-                    {6, 5},
+                    {1, 0}, 
+                    {2, 1}, 
+                    {3, 2}, 
+                    {4, 3}, 
+                    {5, 4}, 
+                    {6, 5}, 
+                }
+                
+            }, 
+            new Question(){
+                TitleQuestion = "Как на счет будущего?", 
+                
+                TitleAnswers = new List<string>(){ 
+                    "Я спокоен за свое будущее", 
+                    "Я тревожусь о будущем больше обычного", 
+                    "Я чувствую, что меня ничего не ждет в будущем", 
+                    "Мое будущее безнадежно и будет еще хуже", 
                 }
             },
             new Question(){
-                TitleQuestion = "Как на счет будущего?",
+                TitleQuestion = "Как у тебя с удачей?", 
                 
                 TitleAnswers = new List<string>(){
-                    "Я спокоен за свое будущее",
-                    "Я тревожусь о будущем больше обычного",
-                    "Я чувствую, что меня ничего не ждет в будущем",
-                    "Мое будущее безнадежно и будет еще хуже",
+                    "Я не чувствую себя неудачником", 
+                    "Я потерпел больше неудач, чем следовало бы", 
+                    "Когда я оглядываюсь на свою жизнь, я вижу в ней много неудач", 
+                    "Я чувствую, что как личность я — полный неудачник", 
                 }
             },
             new Question(){
-                TitleQuestion = "Как у тебя с удачей?",
-                
-                TitleAnswers = new List<string>(){
-                    "Я не чувствую себя неудачником",
-                    "Я потерпел больше неудач, чем следовало бы",
-                    "Когда я оглядываюсь на свою жизнь, я вижу в ней много неудач",
-                    "Я чувствую, что как личность я — полный неудачник",
-                }
-            },
-            new Question(){
-                TitleQuestion = "Ты получаешь удовольствие от того что делаешь?",
+                TitleQuestion = "Ты получаешь удовольствие от того что делаешь?", 
                 
                 TitleAnswers = new List<string>(){
                     "Я получаю так же много удовольствия от того, чем я всегда наслаждался",
@@ -227,14 +228,14 @@ namespace TestingState
             }
         };
 
-        private Tested() { }
+        private Tested() { } 
 
-        public static Tested GetInstance(){
-            return instance;
+        public static Tested GetInstance(){ 
+            return instance; 
         }
 
-        public List<Question> GetQuestions(){
-            return Questions;
+        public List<Question> GetQuestions(){ 
+            return Questions; 
         }
     }
 }
